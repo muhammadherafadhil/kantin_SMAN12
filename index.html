@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="Kantin Barokah SMAN 12 Makassar - Pesan makanan dan minuman favorit secara digital, cepat, dan praktis.">
+  <title>Kantin Barokah SMAN 12 Makassar</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <i class="fas fa-utensils"></i> Kantin Barokah — pesan lebih cepat, antre lebih singkat 
+      <span><i class="far fa-clock"></i> Buka 07.00–15.00</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-icon">K</span>
+        <span>Kantin Barokah</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#promo">Promo</a>
+        <a href="#cara-pesan">Cara Pesan</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCart" aria-label="Buka keranjang">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a class="btn primary" href="#menu">Pesan Sekarang</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#menu" class="mobile-link">Menu</a>
+    <a href="#promo" class="mobile-link">Promo</a>
+    <a href="#cara-pesan" class="mobile-link">Cara Pesan</a>
+    <a href="#tentang" class="mobile-link">Tentang</a>
+    <a href="#kontak" class="mobile-link">Kontak</a>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Kantin Barokah SMAN 12 Makassar • Fresh • Terjangkau</span>
+          <h1>Jajan enak,<br><span>belajar tetap fokus.</span></h1>
+          <p>Temukan makanan dan minuman favoritmu, cek promo hari ini, lalu pesan sebelum jam istirahat. Praktis untuk siswa, guru, dan seluruh warga SMAN 12 Makassar.</p>
+          <div class="hero-buttons">
+            <a class="btn primary large" href="#menu"><i class="fas fa-book-open"></i> Lihat Menu</a>
+          </div>
+          <div class="hero-points">
+            <span><i class="fas fa-check-circle"></i> Harga pelajar</span>
+            <span><i class="fas fa-check-circle"></i> Pesan via WhatsApp</span>
+            <span><i class="fas fa-check-circle"></i> Menu harian</span>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="hero-food">
+            <div class="food-top"><i class="fas fa-fire"></i>KANTIN BAROKAH</div>
+            <div class="food-art">
+            <img src="foto/tokos.jpeg" alt="Foto Kantin Barokah">
+            </div>
+            <div class="food-bottom">
+              <div>
+                <small></small>
+                <strong></strong>
+              </div>
+            </div>
+          </div>
+          <div class="float-card two">
+            <i class="fas fa-bolt" style="color: var(--primary); font-size: 1.1rem;"></i>
+            <span>
+              <b>Pesan sebelum istirahat</b>
+              <small>Ambil langsung di kantin</small>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div><b>17</b><small>Menu tersedia</small></div>
+        <div><b>07.00–15.00</b><small>Jam operasional</small></div>
+        <div><b>100%</b><small>Harga transparan</small></div>
+        <div><b><i class="fab fa-whatsapp"></i></b><small>Pesan langsung</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Menu Kantin</span>
+            <h2>Mau makan apa hari ini?</h2>
+          </div>
+          <p>Pilih menu favoritmu. Foto dan harga disesuaikan dengan kondisi asli Kantin Barokah.</p>
+        </div>
+
+        <div class="menu-gallery">
+          <div class="menu-gallery-head">
+            <h3><i class="fas fa-camera"></i> Foto Menu Asli Kantin Barokah</h3>
+            <p>Lihat langsung menu andalan kami — klik foto untuk memperbesar.</p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item" onclick="openLightbox('foto/menu2.png', 'Coffee Series & Menu Spesial')">
+              <img src="foto/menu2.png" alt="Coffee Series">
+              <figcaption>
+                <b>Coffee Series & Menu Spesial</b>
+                <small>Iced Coffee Gula Aren, Americano, Kopi Susu, Es Coklat, Matcha</small>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" onclick="openLightbox('foto/menu1.png', 'Aneka Menu Roti & Snack')">
+              <img src="foto/menu1.png" alt="Aneka Roti">
+              <figcaption>
+                <b>Aneka Menu Roti & Snack</b>
+                <small>Roti Daging Ayam, Sosis, Coklat Pisang, Tela-Tela, Tahu Gila</small>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="tools">
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Cari nasi, mie, es teh...">
+          </div>
+          <div class="categories" id="categories">
+            <button class="cat-btn active" data-cat="Semua">Semua</button>
+            <button class="cat-btn" data-cat="Makanan">Makanan</button>
+            <button class="cat-btn" data-cat="Minuman">Minuman</button>
+            <button class="cat-btn" data-cat="Snack">Snack</button>
+            <button class="cat-btn" data-cat="Paket Hemat">Paket Hemat</button>
+          </div>
+        </div>
+
+        <div class="products" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <section class="promo" id="promo">
+      <div class="container">
+        <div class="promo-head">
+          <div>
+            <span class="eyebrow light">Promo Hari Ini</span>
+            <h2>Lebih hemat, lebih kenyang.</h2>
+          </div>
+          <small style="opacity: 0.8;">*Syarat & ketentuan berlaku</small>
+        </div>
+        <div class="promo-grid">
+          <article class="promo-card">
+            <span><i class="fas fa-clock"></i> PRE-ORDER</span>
+            <h3>Pesan sebelum jam istirahat</h3>
+            <p>Kurangi waktu antre, ambil langsung saat bel berbunyi.</p>
+            <b>Praktis & cepat</b>
+            <button onclick="document.querySelector('#menu').scrollIntoView({behavior:'smooth'})">Pesan Sekarang <i class="fas fa-arrow-right"></i></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="cara-pesan">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow">Cara Pesan</span>
+          <h2>Dari pilih menu sampai makan.</h2>
+          <p>Semua dibuat sederhana agar tidak mengganggu waktu belajar.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <i class="fas fa-search"></i>
+            <h3>01. Pilih menu</h3>
+            <p>Lihat menu dan harga yang tersedia di atas.</p>
+          </div>
+          <div class="step">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>02. Masukkan keranjang</h3>
+            <p>Tentukan jumlah makanan dan minuman.</p>
+          </div>
+          <div class="step">
+            <i class="fas fa-edit"></i>
+            <h3>03. Isi detail</h3>
+            <p>Masukkan nama, kelas, dan waktu pengambilan.</p>
+          </div>
+          <div class="step">
+            <i class="fab fa-whatsapp"></i>
+            <h3>04. Konfirmasi WhatsApp</h3>
+            <p>Pesanan langsung terkirim ke pemilik kantin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tentang">
+      <div class="container about-grid">
+        <div class="school-card">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <i class="fas fa-school" style="font-size: 1.5rem; color: var(--primary);"></i>
+            <b>KANTIN BAROKAH<br>SMAN 12 MAKASSAR</b>
+          </div>
+          <div class="screen">
+            <i class="fas fa-utensils" style="font-size: 2rem; color: var(--primary);"></i>
+            <strong>Jajan aman,<br>belajar nyaman.</strong>
+            <small>Untuk seluruh warga SMAN 12 Makassar</small>
+          </div>
+          <footer style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+            <i class="far fa-clock"></i> Buka sekarang <b>07.00 — 15.00</b>
+          </footer>
+        </div>
+        <div>
+          <span class="eyebrow">Tentang Kantin</span>
+          <h2>Ruang kecil dengan peran besar di sekolah.</h2>
+          <p>Kantin Barokah SMAN 12 Makassar membantu kantin sekolah tampil lebih modern tanpa menghilangkan suasana ramah kantin. Siswa dapat melihat menu, mengetahui harga, mendapatkan promo, dan melakukan pemesanan dengan lebih teratur.</p>
+          <div class="about-list">
+            <div>
+              <i class="fas fa-salad"></i>
+              <span>
+                <b>Menu beragam</b>
+                <small>Makanan utama, snack, dan minuman segar.</small>
+              </span>
+            </div>
+            <div>
+              <i class="fas fa-wallet"></i>
+              <span>
+                <b>Ramah kantong</b>
+                <small>Harga sesuai kebutuhan pelajar.</small>
+              </span>
+            </div>
+            <div>
+              <i class="fas fa-mobile-alt"></i>
+              <span>
+                <b>Digital & praktis</b>
+                <small>Pemesanan terhubung langsung ke WhatsApp.</small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">FAQ</span>
+          <h2>Yang perlu kamu tahu.</h2>
+          <p>Informasi aturan pemesanan secara online di Kantin Barokah SMAN 12 Makassar.</p>
+          <a href="https://wa.me/6285298340407" target="_blank" class="btn outline" style="margin-top: 1rem;">
+            <i class="fab fa-whatsapp"></i> Tanya melalui WhatsApp
+          </a>
+        </div>
+        <div class="accordion">
+          <details open>
+            <summary>Apakah bisa pesan sebelum jam istirahat?</summary>
+            <p>Bisa. Sistem ini dirancang untuk pre-order dan waktu pengambilan dapat disesuaikan dengan kebijakan Kantin Barokah.</p>
+          </details>
+          <details>
+            <summary>Apakah pembayaran dilakukan saat checkout?</summary>
+            <p>Detail pesanan dikirim ke WhatsApp. Pembayaran dikonfirmasi langsung sesuai metode yang ditentukan pemilik Kantin Barokah (tunai/transfer).</p>
+          </details>
+          <details>
+            <summary>Apakah harga menu bisa diubah?</summary>
+            <p>Bisa. Semua menu dan harga dikelola secara terpusat dan dapat disesuaikan dengan kondisi terkini.</p>
+          </details>
+          <details>
+            <summary>Apakah website bisa dikembangkan menjadi sistem kantin penuh?</summary>
+            <p>Sangat bisa. Dapat ditambah database, manajemen stok, dashboard admin, laporan penjualan, akun penjual, QRIS, dan payment gateway.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="kontak">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#home" style="color: white; margin-bottom: 1rem;">
+            <span class="brand-icon">K</span>
+            <span>Kantin Barokah</span>
+          </a>
+          <p>Platform digital untuk membuat Kantin Barokah SMAN 12 Makassar lebih mudah dipromosikan dan dipesan secara praktis.</p>
+        </div>
+        <div>
+          <h4>Menu</h4>
+          <a href="#menu">Makanan</a>
+          <a href="#menu">Minuman</a>
+          <a href="#menu">Snack</a>
+          <a href="#promo">Promo</a>
+        </div>
+        <div>
+          <h4>Informasi</h4>
+          <span><i class="far fa-calendar"></i> Senin–Sabtu</span>
+          <span><i class="far fa-clock"></i> 07.00–15.00</span>
+          <span><i class="fas fa-map-marker-alt"></i> Area SMAN 12 Makassar</span>
+          <span><i class="fab fa-whatsapp"></i> 0852-9834-0407</span>
+        </div>
+        <div>
+          <h4>Butuh bantuan?</h4>
+          <p>Hubungi pemilik Kantin Barokah untuk ketersediaan menu atau kerja sama.</p>
+          <a href="https://wa.me/6285298340407" target="_blank" class="btn green" style="margin-top: 0.5rem;">
+            <i class="fab fa-whatsapp"></i> Chat WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 Kantin Barokah SMAN 12 Makassar.
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-head">
+      <div>
+        <span class="eyebrow" style="margin-bottom: 0.25rem;">Pesananmu</span>
+        <h2>Keranjang</h2>
+      </div>
+      <button class="cart-close" id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-list" id="cartList">
+      <div style="text-align: center; color: var(--text-muted); padding: 2rem 0;">
+        <i class="fas fa-shopping-basket" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+        <p>Keranjang masih kosong</p>
+      </div>
+    </div>
+    <div class="cart-bottom">
+      <div class="cart-total">
+        <span>Total</span>
+        <b id="cartTotal">Rp0</b>
+      </div>
+      <button class="btn primary full" id="checkoutBtn" onclick="openModal()">
+        Lanjut Checkout <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <span class="eyebrow">Checkout Pesanan</span>
+      <h2>Siap, tinggal isi detail.</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Data ini akan dikirim ke WhatsApp pemilik Kantin Barokah.</p>
+      
+      <form id="checkoutForm" onsubmit="submitOrder(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Nama lengkap</label>
+            <input type="text" name="nama" required placeholder="Nama siswa/guru">
+          </div>
+          <div class="form-group">
+            <label>Kelas / Bagian</label>
+            <input type="text" name="kelas" required placeholder="X / Guru">
+          </div>
+          <div class="form-group full">
+            <label>No. WhatsApp</label>
+            <input type="tel" name="telepon" required placeholder="08xxxxxxxxxx">
+          </div>
+          <div class="form-group full">
+            <label>Waktu ambil</label>
+            <select name="waktu" required>
+              <option value="Jam istirahat 1">Jam istirahat 1</option>
+              <option value="Jam istirahat 2">Jam istirahat 2</option>
+              <option value="Setelah pulang sekolah">Setelah pulang sekolah</option>
+              <option value="Sesuai konfirmasi kantin">Sesuai konfirmasi kantin</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Catatan (opsional)</label>
+            <textarea name="catatan" rows="3" placeholder="Contoh: tidak pedas, minuman dingin..."></textarea>
+          </div>
+        </div>
+        
+        <div class="checkout-total">
+          <span>Total pesanan</span>
+          <b id="modalTotal">Rp0</b>
+        </div>
+        
+        <button type="submit" class="btn green full large">
+          <i class="fab fa-whatsapp"></i> Kirim Pesanan ke WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close"><i class="fas fa-times"></i></button>
+    <img id="lightboxImg" src="" alt="Preview">
+  </div>
+
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMsg">Item ditambahkan ke keranjang</span>
+  </div>
+
+  <a href="https://wa.me/6285298340407" target="_blank" class="floating-wa" aria-label="Chat WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
