@@ -16,10 +16,16 @@
 </head>
 <body>
 
+  <!--states bannerbuka atau tutupnya-->
+  <div id="statusBanner" class="status-banner hidden">
+    <i class="fas fa-info-circle"></i>
+    <span id="statusText">Kantin sedang buka</span>
+  </div>
+
   <div class="topbar">
     <div class="container">
       <i class="fas fa-utensils"></i> Kantin Barokah — pesan lebih cepat, antre lebih singkat 
-      <span><i class="far fa-clock"></i> Buka 07.00–15.00</span>
+      <span id="topbarJam"><i class="far fa-clock"></i> Buka 07.00–15.00</span>
     </div>
   </div>
 
@@ -78,12 +84,12 @@
           <div class="hero-food">
             <div class="food-top"><i class="fas fa-fire"></i>KANTIN BAROKAH</div>
             <div class="food-art">
-            <img src="foto/tokos.jpeg" alt="Foto Kantin Barokah">
+              <img src="foto/tokos.jpeg" alt="Foto Kantin Barokah" onerror="this.src='https://via.placeholder.com/600x350/0ea5e9/ffffff?text=Kantin+Barokah'">
             </div>
             <div class="food-bottom">
               <div>
-                <small></small>
-                <strong></strong>
+                <small>Status</small>
+                <strong id="heroStatus">Memuat...</strong>
               </div>
             </div>
           </div>
@@ -100,7 +106,7 @@
 
     <section class="stats">
       <div class="container stats-grid">
-        <div><b>17</b><small>Menu tersedia</small></div>
+        <div><b id="statMenu">17</b><small>Menu tersedia</small></div>
         <div><b>07.00–15.00</b><small>Jam operasional</small></div>
         <div><b>100%</b><small>Harga transparan</small></div>
         <div><b><i class="fab fa-whatsapp"></i></b><small>Pesan langsung</small></div>
@@ -124,14 +130,14 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-item" onclick="openLightbox('foto/menu2.png', 'Coffee Series & Menu Spesial')">
-              <img src="foto/menu2.png" alt="Coffee Series">
+              <img src="foto/menu2.png" alt="Coffee Series" onerror="this.src='https://via.placeholder.com/400x250/0ea5e9/ffffff?text=Coffee+Series'">
               <figcaption>
                 <b>Coffee Series & Menu Spesial</b>
                 <small>Iced Coffee Gula Aren, Americano, Kopi Susu, Es Coklat, Matcha</small>
               </figcaption>
             </figure>
             <figure class="gallery-item" onclick="openLightbox('foto/menu1.png', 'Aneka Menu Roti & Snack')">
-              <img src="foto/menu1.png" alt="Aneka Roti">
+              <img src="foto/menu1.png" alt="Aneka Roti" onerror="this.src='https://via.placeholder.com/400x250/0ea5e9/ffffff?text=Aneka+Roti'">
               <figcaption>
                 <b>Aneka Menu Roti & Snack</b>
                 <small>Roti Daging Ayam, Sosis, Coklat Pisang, Tela-Tela, Tahu Gila</small>
@@ -284,6 +290,10 @@
             <summary>Apakah website bisa dikembangkan menjadi sistem kantin penuh?</summary>
             <p>Sangat bisa. Dapat ditambah database, manajemen stok, dashboard admin, laporan penjualan, akun penjual, QRIS, dan payment gateway.</p>
           </details>
+          <details>
+            <summary>Jam berapa kantin berhenti menerima pesanan online?</summary>
+            <p>Pemesanan online otomatis ditutup pada pukul <b>16.00 WITA</b>. Setelah itu, tombol pesan akan dinonaktifkan hingga kantin buka kembali keesokan hari.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -367,7 +377,7 @@
           </div>
           <div class="form-group">
             <label>Kelas / Bagian</label>
-            <input type="text" name="kelas" required placeholder="X / Guru">
+            <input type="text" name="kelas" required placeholder="X IPA / Guru">
           </div>
           <div class="form-group full">
             <label>No. WhatsApp</label>
@@ -410,10 +420,28 @@
     <span id="toastMsg">Item ditambahkan ke keranjang</span>
   </div>
 
+  <!--tombol wa ngambang-->
   <a href="https://wa.me/6285298340407" target="_blank" class="floating-wa" aria-label="Chat WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <script src="script.js"></script>
+  <!--modal toko tutup-->
+  <div class="modal" id="closedModal">
+    <div class="modal-box" style="text-align: center; max-width: 420px;">
+      <div style="font-size: 4rem; color: var(--accent); margin-bottom: 1rem;">
+        <i class="fas fa-store-slash"></i>
+      </div>
+      <h2 style="margin-bottom: 0.5rem;">Kantin Sudah Tutup</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Maaf, pemesanan online sudah ditutup karena melewati jam operasional (<b>16.00 WITA</b>).
+        Silakan pesan kembali besok mulai pukul <b>07.00 WITA</b>.
+      </p>
+      <button class="btn primary full" onclick="closeClosedModal()">
+        <i class="fas fa-check"></i> Mengerti
+      </button>
+    </div>
+  </div>
+
+<script src="script.js" defer></script>
 </body>
 </html>

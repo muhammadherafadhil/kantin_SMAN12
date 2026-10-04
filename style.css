@@ -3,6 +3,8 @@
   --primary-hover: #0284c7;
   --primary-light: #e0f2fe;
   --accent: #f59e0b;
+  --success: #22c55e;
+  --danger: #ef4444;
   --bg: #ffffff;
   --surface: #f0f9ff;
   --surface-hover: #e0f2fe;
@@ -62,6 +64,27 @@ ul { list-style: none; }
 .btn.green:hover { background: #1da851; }
 .btn.full { width: 100%; }
 .btn.large { padding: 1rem 2rem; font-size: 1.05rem; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+
+/* ============================================
+   STATUS BANNER (FITUR BARU)
+   ============================================ */
+.status-banner {
+  background: var(--danger);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+.status-banner.hidden { display: none; }
+.status-banner.open { background: var(--success); }
+.status-banner.closed { background: var(--danger); }
 
 .center { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
 .center h2 { font-size: 2rem; margin-bottom: 0.75rem; color: var(--text); }
@@ -127,7 +150,7 @@ ul { list-style: none; }
 }
 .hero-food:hover { transform: rotate(0deg) scale(1.02); }
 .food-top { font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; }
-.food-art img {  width: 110%; height: 350px;object-fit: cover;border-radius: var(--radius);display: block;}
+.food-art img { width: 110%; height: 350px; object-fit: cover; border-radius: var(--radius); display: block; }
 .food-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 .food-bottom small { display: block; color: var(--text-muted); font-size: 0.85rem; }
 .food-bottom strong { font-size: 1.25rem; color: var(--primary); }
@@ -154,48 +177,40 @@ ul { list-style: none; }
 .section-head p { color: var(--text-muted); max-width: 500px; }
 
 /* =========================================
-   BAGIAN GALERI MENU (GABUNGAN & OPTIMAL)
+   GALERI MENU
    ========================================= */
 .menu-gallery {
-  max-width: 1200px; /* Memperlebar area galeri */
-  margin: 0 auto;    /* Membuat galeri ke tengah */
-  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
-
 .menu-gallery-head { text-align: center; margin-bottom: 2rem; }
 .menu-gallery-head h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .menu-gallery-head p { color: var(--text-muted); }
 
 .gallery-grid {
   display: grid;
-  /* Menggunakan minmax 300px agar responsif, dan gap 20px */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .gallery-item {
   position: relative;
-  width: 100%; /* Memastikan figure mengisi ruang grid */
+  width: 100%;
   margin: 0;
-  border-radius: var(--radius); /* Menggunakan variabel radius (12px) */
+  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   cursor: pointer;
 }
-
 .gallery-item img {
-  width: 100%;       /* Foto mengikuti lebar kontainer */
-  height: 250px;     /* Tinggi tetap agar seragam */
-  object-fit: cover; /* Agar foto tidak gepeng/terdistorsi */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
   display: block;
-  transition: transform 0.4s ease; /* Efek zoom saat hover */
+  transition: transform 0.4s ease;
 }
-
-/* Efek zoom saat mouse diarahkan */
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
+.gallery-item:hover img { transform: scale(1.05); }
 .gallery-item figcaption {
   position: absolute; bottom: 0; left: 0; right: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
@@ -205,7 +220,6 @@ ul { list-style: none; }
 .gallery-item:hover figcaption { transform: translateY(0); opacity: 1; }
 .gallery-item figcaption b { display: block; font-size: 1.1rem; margin-bottom: 0.25rem; }
 .gallery-item figcaption small { font-size: 0.85rem; opacity: 0.9; }
-/* ========================================= */
 
 .tools { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
 .search { position: relative; max-width: 400px; width: 100%; }
