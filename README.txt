@@ -1,6 +1,6 @@
-KANTINKITA — WEBSITE PEMESANAN & PROMOSI KANTIN SEKOLAH
+KANTINBAROKAH — WEBSITE PEMESANAN & PROMOSI KANTIN SEKOLAH
 
-Teknologi: HTML5, CSS3, JavaScript Vanilla, LocalStorage, WhatsApp Click-to-Chat.
+Teknologi: HTML5, CSS3, JavaScript, LocalStorage, WhatsApp Click-to-Chat.
 
 FILE:
 - index.html
@@ -38,6 +38,3 @@ FITUR:
 - FAQ
 - Testimoni
 - Responsive mobile/tablet/desktop
-
-PENGEMBANGAN BERIKUTNYA:
-Database MySQL, dashboard admin, CRUD menu, stok, status pesanan, laporan penjualan, QRIS/payment gateway, login, multi-kantin, notifikasi, dan PWA.
